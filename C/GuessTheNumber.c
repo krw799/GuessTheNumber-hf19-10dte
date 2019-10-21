@@ -7,6 +7,7 @@ int main()
     srand(time(NULL));
 
     int n = (rand() % 100)+1;
+    int counter = 0;
 
     char w = 0;
 
@@ -14,6 +15,7 @@ int main()
     {
         printf("Podaj liczbe: ");
         int l;
+	counter++;
         scanf("%d", &l);
         
         if (l > n)
@@ -26,7 +28,7 @@ int main()
         }
         else
         {
-            printf("Wygrales!\n");
+            printf("Wygrales w %d-tym podejciu!\n",counter);
             w = 1;
         }
 
